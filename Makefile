@@ -27,31 +27,31 @@ $(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
 	@echo " $(CC) $(CFLAGS) $(INC) -c -o $@ $<"; $(CC) $(CFLAGS)  -c -o $@ $<
 
 run1:
-	$(RUN) ejemplosRAM/test1.ram bin/input_tape.in bin/output_tape.out 0
+	$(RUN) ejemplosRAM/test1.ram bin/input_tape.in bin/output_tape.out 1
 
 run2:
-	$(RUN) ejemplosRAM/test2.ram bin/input_tape.in bin/output_tape.out 0
+	$(RUN) ejemplosRAM/test2.ram bin/input_tape.in bin/output_tape.out 1
 
 run3:
-	$(RUN) ejemplosRAM/test3.ram bin/input_tape.in bin/output_tape.out 0
+	$(RUN) ejemplosRAM/test3.ram bin/input_tape.in bin/output_tape.out 1
 
 run4:
-	$(RUN) ejemplosRAM/test4.ram bin/input_tape.in bin/output_tape.out 0
+	$(RUN) ejemplosRAM/test4.ram bin/input_tape.in bin/output_tape.out 1
 
 run5:
-	$(RUN) ejemplosRAM/test5.ram bin/input_tape.in bin/output_tape.out 0
+	$(RUN) ejemplosRAM/test5.ram bin/input_tape.in bin/output_tape.out 1
 
 run6:
-	$(RUN) ejemplosRAM/test6.ram bin/input_tape.in bin/output_tape.out 0
+	$(RUN) ejemplosRAM/test6.ram bin/input_tape.in bin/output_tape.out 1
 
 run7:
-	$(RUN) ejemplosRAM/test7.ram bin/input_tape.in bin/output_tape.out 0
+	$(RUN) ejemplosRAM/test7.ram bin/input_tape.in bin/output_tape.out 1
 
 run8:
-	$(RUN) ejemplosRAM/testn.ram bin/input_tape.in bin/output_tape.out 0
+	$(RUN) ejemplosRAM/testn.ram bin/input_tape.in bin/output_tape.out 1
 
 run9:
-	$(RUN) ejemplosRAM/testlog.ram bin/input_tape.in bin/output_tape.out 0
+	$(RUN) ejemplosRAM/testlog.ram bin/input_tape.in bin/output_tape.out 1
 
 debug:
 

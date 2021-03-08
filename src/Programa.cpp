@@ -54,6 +54,7 @@ vector<string> Programa::ReadFile(string fichero_programa) {
   fstream fichero;
   fichero.open(fichero_programa, ios::in);
 
+  bool halt = false;
   if (fichero.fail()) {
     string error = "No se puede abrir el fichero de entrada porque no existe";
     throw error;
@@ -69,6 +70,7 @@ vector<string> Programa::ReadFile(string fichero_programa) {
       } else if (instruccion == "halt" ||
                  instruccion == HALTS) {  // Caso del HALT
         programa.push_back(PasarMayusculas(instruccion));
+        halt = true;
       } else {  // Resto de instrucciones
         string aux;
         aux = instruccion;
@@ -80,6 +82,10 @@ vector<string> Programa::ReadFile(string fichero_programa) {
         }
       }
     }
+  }
+  if (!halt) {
+    string error = "El programa no contiene la instrucción HALT";
+    throw error;
   }
   fichero.close();
   return programa;
