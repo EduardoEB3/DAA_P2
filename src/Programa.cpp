@@ -116,7 +116,7 @@ void Programa::CrearPrograma(vector<string> programa, RAM& ram) {
       }
       int tipo_direccionamiento;
       string auxiliar;
-      for (unsigned long j = programa[i].size() - 1; j >= 0; j--) {
+      for (int j = programa[i].size() - 1; j >= 0; j--) {
         if (programa[i][j] == ASTERISCO) {
           tipo_direccionamiento = INDIRECTO;
         } else if (programa[i][j] == IGUAL) {
