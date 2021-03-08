@@ -33,10 +33,6 @@ READ::READ(string instruccion, string operando, int pos,
 READ::~READ() { delete[] ram_; }
 
 void READ::ejecutar_instruccion(int debug, int operando_numero) {
-  if (operando_numero == 0) {
-    string error = "Error: No puedes hacer un READ 0";
-    throw error;
-  }
   ram_->get_memoria().set_registro_valor(operando_numero,
                                          ram_->get_cintaentrada().get_valor());
   ram_->get_cintaentrada().IncremetarCabezal();
