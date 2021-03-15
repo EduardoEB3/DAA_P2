@@ -72,10 +72,6 @@ void RAM::ejecutar_RAM(int debug) {
     }
 
     if (debug == 1) {
-      if (programa_.get_instruccion(contador_programa_)
-              ->get_nombre_instruccion() == HALTS) {
-        contador_programa_ = 0;
-      }
       return;
     }
   }

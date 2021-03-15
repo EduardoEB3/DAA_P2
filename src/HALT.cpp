@@ -39,6 +39,7 @@ void HALT::ejecutar_instruccion(int debug, int operando_numero) {
     cout << "La instrucción HALT tiene un direccionamiento directo. En este "
             "punto acaba el programa y escribo la cinta de salida en el fichero"
          << endl;
+    throw this;
   }
   ram_->IncrementarContador();
   ram_->get_cintasalida().WriteFile();

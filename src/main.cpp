@@ -57,6 +57,8 @@ int main(int argc, char* argv[]) {
       }
     } catch (string& error) {
       cout << error << endl;
+    } catch (...) {
+      cout << "Saliendo..." << endl;
     }
   }
   return 0;
